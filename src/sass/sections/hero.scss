@@ -1,0 +1,42 @@
+.hero {
+    padding: 230px 0;
+    background-image: linear-gradient(0.0deg, rgba(252,227,138,0.89) 0%, rgba(243,129,129,0.89) 100%), url(../images/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    color: $baner-text-color;
+
+    @media (min-resolution: 192dpi) {
+        padding: 230px 0;
+        background-image: linear-gradient(0.0deg, rgba(252,227,138,0.89) 0%, rgba(243,129,129,0.89) 100%), url(../images/banner@2x.jpg);
+    }
+}
+
+.hero__title {
+    @include font($fs: 150px, $fw: 700, $lh: 140px);
+    max-width: 836px;
+    text-transform: uppercase;
+    margin: 0 auto;
+    margin-bottom: 120px;
+}
+
+.hero__title-decorative {
+    @include font($fs: 72px);
+    display: block;
+    font-family: $decorative-font;
+    text-transform: none;
+    margin-bottom: 42px;
+}
+
+.hero__link {
+    @include font($fw: 700);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 160px;
+    height: 40px;
+    border: 3.0px solid $baner-text-color;
+    text-transform: uppercase;
+    color: $baner-text-color;
+}

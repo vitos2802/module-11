@@ -1,0 +1,88 @@
+.header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 26px 0;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.logo {
+    @include font($fs: 30px, $fw: 700);
+    color: $baner-text-color;
+}
+
+.nav {
+    display: flex;
+}
+
+.nav__list {
+    display: flex;
+    margin-right: 52px;
+}
+
+.nav__item {
+    &:not(:last-of-type) {
+        margin-right: 56px;
+    }
+
+    &:hover {
+        .nav__link {
+            color: $baner-hover-color;
+        }
+
+        .nav__link::after {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+
+.nav__link {
+    @include font;
+    position: relative;
+    text-transform: uppercase;
+    color: $baner-text-color;
+    transition: all .2s linear;
+
+    &::after {
+        @include pseudo;
+        width: 100%;
+        border-bottom: 3px solid  $baner-hover-color;
+        left: 0;
+        bottom: -12px;
+        visibility: hidden;
+        opacity: 0;
+        transition: all .2s linear;
+    }
+}
+
+.nav__btn-list {
+    display: flex;
+}
+
+.nav__btn-item:not(:last-child) {
+    margin-right: 42px;
+}
+
+.nav__btn-link {
+    display: block;
+    width: 20px;
+    height: 17px;
+    background-image: url(../images/icons/cart.svg);
+    background-repeat: no-repeat;
+}
+
+.search {
+    width: 20px;
+    height: 20px;
+    background-image: url(../images/icons/glass.svg);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    cursor: pointer;
+}

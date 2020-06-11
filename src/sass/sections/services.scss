@@ -1,0 +1,59 @@
+.services {
+    padding: 46px 0;
+}
+
+.services__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.services__item {
+    max-width: 382px;
+    padding-left: 80px;
+    background-repeat: no-repeat;
+    background-position: 20px 0;
+
+    &:nth-child(-n + 3) {
+        margin-bottom: 100px;
+    }
+
+    &_icon-alarm {
+        background-image: url(../images/icons/alarm.svg);
+    }
+
+    &_icon-line-graph {
+        background-image: url(../images/icons/line-graph.svg);
+    }
+
+    &_icon-computer {
+        background-image: url(../images/icons/computer.svg);
+    }
+
+    &_icon-book {
+        background-image: url(../images/icons/book.svg);
+    }
+
+    &_icon-home {
+        background-image: url(../images/icons/home.svg);
+    }
+
+    &_icon-image {
+        background-image: url(../images/icons/image.svg);
+    }
+}
+
+.services__item-title {
+    @include font($fw: 700);
+    text-transform: uppercase;
+    color: $section-main-text-color;
+    margin-bottom: 16px;
+}
+
+.services__item-desc {
+    font-family: $second-font;
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 400;
+    color: $section-second-text-color;
+}
